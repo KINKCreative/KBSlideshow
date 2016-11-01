@@ -57,8 +57,8 @@ class KBSlideshow extends DataExtension
 
         # Utilizes SortableGridField if installed
         # https://github.com/UndefinedOffset/SortableGridField
-        if (class_exists('GridFieldSortableRows')) {
-            $cfg->addComponent(new GridFieldSortableRows('SortOrder'));
+        if (class_exists('GridFieldOrderableRows')) {
+            $cfg->addComponent(new GridFieldOrderableRows('SortOrder'));
         }
 
         $gridField = GridField::create(
@@ -72,7 +72,7 @@ class KBSlideshow extends DataExtension
             'Width',
             _t('KBSlideshow.Width', 'Width')
         )->setRightTitle(_t('KBSlideshow.WidthHelp', ''));
-        
+
         $height = NumericField::create(
             'Height',
             _t('KBSlideshow.Height', 'Height')

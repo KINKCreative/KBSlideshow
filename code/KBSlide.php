@@ -117,7 +117,7 @@ class KBSlide extends DataObject
         );
 
         # Allow for manual input sorting if module:SortableGridField isn't installed
-        if (!class_exists('GridFieldSortableRows')) {
+        if (!class_exists('GridFieldOrderableRows')) {
             $fields->push(NumericField::create(
                     'SortOrder',
                     _t('KBSlideshow.SortOrder', 'Sort order')
